@@ -1,0 +1,22 @@
+{
+    "name": "mlg",
+    "version": "1.0.0",
+    "main": "main.js",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview",
+        "deploy": "vite build && gh-pages -d dist"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "description": "",
+    "devDependencies": {
+        "gh-pages": "^5.0.0",
+        "vite": "^6.0.4"
+    },
+    "dependencies": {
+        "three": "^0.171.0"
+    }
+}
