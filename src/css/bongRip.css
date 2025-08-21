@@ -1,0 +1,30 @@
+/* BongRip hitbox for interaction */
+.bong-rip-overlay {
+    position: absolute;
+    width: 45px; /* Adjust size as needed */
+    height: 108px; /* Adjust size to match bong rip object */
+    transform: translate(-50%, -50%); /* Center hitbox on bong rip */
+    z-index: 1000;
+    pointer-events: none; /* Default state: no interaction */
+  }
+  
+  .bong-rip-hitbox {
+    width: 100%;
+    height: 100%;
+    border-radius: 30px; /* Make it circular */
+    pointer-events: all; /* Enable interaction */
+    cursor: pointer;
+  }
+  
+  #bong-rip-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover; /* Ensures the video fills the screen without distortion */
+    z-index: 2000; /* Higher z-index to overlay */
+    background: black; /* Optional: Black background during loading */
+    display: none; /* Hidden by default */
+  }
+  

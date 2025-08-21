@@ -1,0 +1,22 @@
+
+/* Hitmarker effect */
+.hitmarker {
+    position: absolute;
+    width: 40px; /* Adjust based on the size of your PNG */
+    height: 40px; /* Adjust based on the size of your PNG */
+    pointer-events: none;
+    background: url('/hitmarker.png') no-repeat center center;
+    background-size: contain;
+    animation: hitmaker-animation 0.6s ease-out forwards;
+  }
+  
+  @keyframes hitmaker-animation {
+    0% {
+        transform: scale(.75);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(.75);
+        opacity: 0;
+    }
+  }

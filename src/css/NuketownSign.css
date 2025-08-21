@@ -1,0 +1,13 @@
+/* NuketownSign overlay styles */
+.NuketownSign-overlay {
+  pointer-events: none; /* Allow clicks to pass through the overlay itself */
+}
+
+.NuketownSign-hitbox {
+  pointer-events: auto; /* Enable clicks on the hitbox */
+  cursor: pointer;
+  user-select: none;
+  /* Completely invisible - no visual feedback */
+  background: transparent;
+  border: none;
+}

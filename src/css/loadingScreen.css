@@ -1,0 +1,274 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100vw;
+  width: 100vh;
+}
+
+/* Main start screen container */
+#start-screen {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #e35d5b, #e53935);
+  z-index: 1100;
+  font-family: "Bebas Neue", sans-serif;
+  box-sizing: border-box;
+}
+
+.disclaimer {
+  position: fixed;
+  color: white;
+  width: 63%;
+  height: 15%;
+  font-size: 30px;
+  text-align: center;
+  bottom: 0;
+  margin-bottom: 30px;
+}
+
+.disclaimer p {
+  bottom: 0;
+}
+
+/* Button Styles */
+.button {
+  position: fixed;
+  display: inline-block;
+  padding: 20px 40px;
+  color: white;
+  text-decoration: none;
+  font-size: 90px;
+  background-color: #3498db;
+  transition: all 0.5s ease;
+}
+
+.button::before,
+.button::after {
+  content: "";
+  position: absolute;
+  transition: all 0.5s ease;
+}
+
+.button::before {
+  bottom: -15px;
+  height: 15px;
+  width: 100%;
+  left: 8px;
+  transform: skewX(45deg);
+  background-color: rgb(30, 105, 155);
+}
+
+.button::after {
+  right: -15px;
+  height: 100%;
+  width: 15px;
+  bottom: -8px;
+  transform: skewY(45deg);
+  background-color: rgb(34, 121, 179);
+}
+
+/* Pressed state - same as :active styles */
+.button.pressed {
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.button.pressed::before {
+  bottom: -5px;
+  height: 5px;
+  left: 3px;
+}
+
+.button.pressed::after {
+  right: -5px;
+  width: 5px;
+  bottom: -3px;
+}
+
+/*
+#start-screen::before {
+    content: "";
+    position: absolute;
+    top: 45px; 
+    left: 45px;
+    right: 45px;
+    bottom: 45px;
+    border: 30px solid white; 
+    pointer-events: none; 
+    z-index: 1;
+  }
+  
+  .border-segment {
+    position: absolute;
+    pointer-events: none; 
+    z-index: 0;
+  }
+  
+  .border-top {
+    top: 75px;
+    left: 75px;
+    right: 69px;
+    height: 15px;
+    transform: skewX(45deg);
+    background-color: rgba(120, 120, 120, 1);
+  }
+  
+  .border-left {
+    top: 82px;
+    bottom: 66px;
+    left: 75px;
+    width: 15px;
+    transform: skewY(45deg);
+    background-color: rgba(170, 170, 170, 1);
+  }
+  
+  .border-bottom {
+    left: 52px;
+    right: 36px;
+    bottom: 30px;
+    height: 15px;
+    transform: skewX(45deg);
+    background-color: rgba(120, 120, 120, 1);
+  }
+  
+  .border-right {
+    top: 52px;
+    bottom: 38px;
+    right: 30px;
+    width: 15px;
+    transform: skewY(45deg);
+    background-color: rgba(170, 170, 170, 1);
+  }
+*/
+
+/* Loading Screen */
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: none; /* Hidden by default */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Lower than start screen */
+  background: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
+}
+
+#loading-screen video {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+/* Media Queries for Phones */
+@media screen and (max-width: 768px) {
+  #start-screen {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #e35d5b, #e53935);
+  }
+
+  .disclaimer {
+    width: 84%;
+    font-size: 18px;
+    margin-bottom: 124px;
+   }
+
+  .button {
+    font-size: 60px;
+    padding: 15px 30px;
+    margin-bottom: 60px;
+  }
+
+  .button::before {
+    height: 10px;
+    left: 6px;
+    bottom: -10px;
+  }
+
+  .button::after {
+    width: 10px;
+    bottom: -6px;
+    right: -10px;
+  }
+}
+
+/* Media Queries for Tablets */
+@media screen and (min-width: 768px) and (max-width: 1600px) {
+  #start-screen {
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(to right, #e35d5b, #e53935);
+  }
+
+  .disclaimer {
+    width: 70%;
+    font-size: 24px;
+    margin-bottom: 90px;
+  }
+
+  .button {
+    position: fixed;
+    margin: auto;
+    font-size: 70px;
+    padding: 18px 36px;
+  }
+
+  .button::before {
+    height: 12px;
+    left: 7px;
+    bottom: -12px;
+  }
+
+  .button::after {
+    width: 12px;
+    bottom: -8px;
+    right: -12px;
+  }
+}
+
+@media screen and (max-width: 768px) and (orientation: landscape) {
+  #start-screen {
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #e35d5b, #e53935);
+  }
+
+  .disclaimer {
+    width: 90%; /* Adjust width to fit better in landscape */
+    font-size: 14px; /* Reduce font size for landscape */
+    bottom: -54px; /* Align to bottom */
+    margin-bottom: 21px; /* Adjust margin to prevent overlap */
+    position: relative; /* Prevent fixed positioning from interfering */
+  }
+
+  .button {
+    font-size: 50px; /* Reduce button size */
+    padding: 10px 20px; /* Adjust padding */
+    margin-bottom: 120px; /* Ensure proper spacing */
+  }
+
+  .button::before {
+    height: 8px; /* Adjust pseudo-element height */
+    left: 5px;
+    bottom: -8px;
+  }
+
+  .button::after {
+    width: 8px; /* Adjust pseudo-element width */
+    bottom: -5px;
+    right: -8px;
+  }
+}

@@ -1,0 +1,23 @@
+/* Headphones overlay styles */
+.Headphones-overlay {
+  pointer-events: none;
+}
+
+.Headphones-hitbox {
+  pointer-events: auto;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+/* Keep hitbox completely invisible - no hover effects */
+.Headphones-hitbox:hover {
+  background: transparent;
+  border: none;
+}
+
+.Headphones-hitbox:active {
+  background: transparent;
+  border: none;
+}

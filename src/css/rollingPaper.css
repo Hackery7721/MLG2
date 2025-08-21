@@ -1,0 +1,22 @@
+
+/* rolling paper */
+.rolling-paper {
+    background: rgba(0, 0, 0, 0);
+    height: 3px;
+    width: 3px;
+    cursor: pointer;
+  }
+  
+  /* exit button */
+  .exit-button {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    transform: rotate(150deg);
+    width: 72px;
+    height: 93px;
+    background: rgba(255, 255, 255, 0e);
+    cursor: pointer;
+  }

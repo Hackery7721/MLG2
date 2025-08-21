@@ -1,0 +1,33 @@
+
+/* Gramophone overlay styles */
+.gramophone-overlay {
+  pointer-events: none; /* Allow clicks to pass through the overlay itself */
+}
+
+.gramophone-hitbox {
+  pointer-events: auto; /* Enable clicks on the hitbox */
+  cursor: pointer;
+  user-select: none;
+  /* Completely invisible - no visual feedback */
+  background: transparent !important;
+  border: none !important;
+  transition: none !important;
+  /* Override any debug mode styling */
+  box-sizing: border-box !important;
+}
+
+/* Ensure no hover effects on gramophone hitbox - override debug mode */
+.gramophone-hitbox:hover {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Override any debug mode styles specifically */
+.gramophone-hitbox[style*="background"] {
+  background: transparent !important;
+}
+
+.gramophone-hitbox[style*="border"] {
+  border: none !important;
+}

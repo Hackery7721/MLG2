@@ -1,0 +1,27 @@
+/* Xbox360 hitbox for interaction */
+.Xbox360-overlay {
+    position: absolute;
+    width: 75px; /* Adjust size as needed */
+    height: 51px;
+    z-index: 1000;
+    pointer-events: none; /* Default state: no interaction */
+}
+  
+.Xbox360-hitbox {
+    width: 100%;
+    height: 100%;
+    pointer-events: all; /* Enable interaction */
+    cursor: pointer;
+}
+  
+#Xbox360-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover; /* Ensures the video fills the screen without distortion */
+    z-index: 2000; /* Higher z-index to overlay */
+    background: black; /* Optional: Black background during loading */
+    display: none; /* Hidden by default */
+}

@@ -1,0 +1,167 @@
+/* General styles for the server video container */
+.servers-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 12px solid rgb(18, 18, 18);
+    border-radius: 120px; /* Adjust border-radius for curved appearance */
+  }
+  
+  /* Specific styles for TV6 */
+  .tv6-content {
+    width: 675px;
+    height: 725px;
+  }
+  
+  /* Specific styles for TV7 */
+  .tv7-content img {
+    width: 625px;
+    height: 700px;
+    border-color: rgb(18, 18, 18);
+  }
+  
+  
+  /* Scope all styles under #server-menu-overlay */
+  #server-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(13, 17, 23, 0.95); /* Semi-transparent background */
+    color: #c9d1d9;
+    z-index: 9999; /* Ensure it's on top of all other elements */
+    overflow-y: auto; /* Allow vertical scrolling */
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  
+  #server-menu-overlay header {
+    background: #161b22;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 0;
+    margin-top: 15px;
+    z-index: 10;
+    border-radius: 10px;
+    display: flex;
+    width: 100%;
+  }
+  
+  #server-menu-overlay nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  #server-menu-overlay .nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0;
+    width: 100%;
+    padding: 0px 30px;
+  }
+  
+  #server-menu-overlay .nav-link {
+    color: #58a6ff;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  #server-menu-overlay .nav-link:hover {
+    background: #21262d;
+    color: #79c0ff;
+  }
+  
+  #server-menu-overlay main {
+    margin: 30px auto;
+    max-width: 800px;
+    padding: 20px;
+    background: #161b22;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  }
+  
+  #server-menu-overlay h1 {
+    font-size: 2rem;
+    color: #58a6ff;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  #server-menu-overlay h2 {
+    font-size: 1.5rem;
+    color: #79c0ff;
+    margin-bottom: 15px;
+  }
+  
+  #server-menu-overlay p,
+  #server-menu-overlay li {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+  
+  #server-menu-overlay ol,
+  #server-menu-overlay ul {
+    margin: 10px 0;
+    padding-left: 20px;
+  }
+  
+  #server-menu-overlay .instructions-list,
+  #server-menu-overlay .server-list,
+  #server-menu-overlay .coming-soon-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  #server-menu-overlay .instructions-list li,
+  #server-menu-overlay .server-list li,
+  #server-menu-overlay .coming-soon-list li {
+    padding: 10px;
+    background: #21262d;
+    margin: 5px 0;
+    border-radius: 5px;
+  }
+  
+  #server-menu-overlay .external-link {
+    color: #ffa657;
+    text-decoration: underline;
+    transition: color 0.2s ease-in-out;
+  }
+  
+  #server-menu-overlay .external-link:hover {
+    color: #ffc57a;
+  }
+  
+  /* Responsiveness */
+  @media (max-width: 1000px) {
+  
+    #server-menu-overlay .nav-list {
+      gap: 15px;
+    }
+  
+    #server-menu-overlay main {
+      margin-top: 20px auto;
+      padding: 15px 15px 60px 15px;
+    }
+  
+    #server-menu-overlay h1 {
+      font-size: 1.8rem;
+    }
+  
+    #server-menu-overlay h2 {
+      font-size: 1.4rem;
+    }
+  
+    #server-menu-overlay p,
+    #server-menu-overlay li {
+      font-size: 0.9rem;
+    }
+  }
+  

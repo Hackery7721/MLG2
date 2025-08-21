@@ -1,0 +1,29 @@
+/* MountainDew hitbox for interaction */
+.MountainDew-overlay {
+    position: absolute;
+    width: 75px; /* Adjust size as needed */
+    height: 51px;
+    z-index: 1000;
+    pointer-events: none; /* Default state: no interaction */
+}
+  
+.MountainDew-hitbox {
+    width: 100%;
+    height: 100%;
+    pointer-events: all; /* Enable interaction */
+    cursor: pointer;
+    background: rgba(0, 255, 0, 0.3); /* semi-transparent green */
+    border: 1px solid lime;           /* optional: visible border */
+}
+  
+#MountainDew-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover; /* Ensures the video fills the screen without distortion */
+    z-index: 2000; /* Higher z-index to overlay */
+    background: black; /* Optional: Black background during loading */
+    display: none; /* Hidden by default */
+}

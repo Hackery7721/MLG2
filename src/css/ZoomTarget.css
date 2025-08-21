@@ -1,0 +1,27 @@
+/* ZoomTarget Overlay Styles */
+.zoom-target-overlay {
+  pointer-events: auto;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.zoom-target-hitbox {
+  display: block;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.zoom-target-hitbox:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.zoom-target-overlay.zoomed {
+  transform: scale(1.2);
+}
+
+/* Optional: Add a subtle glow effect when zoomed */
+.zoom-target-overlay.zoomed .zoom-target-hitbox {
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.5);
+}

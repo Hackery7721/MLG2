@@ -1,0 +1,47 @@
+/* RayGun Overlay Styles */
+.RayGun-overlay {
+  position: absolute;
+  pointer-events: none; /* Allow clicks to pass through the overlay itself */
+  z-index: 1000;
+}
+
+.RayGun-hitbox {
+  width: 100px; /* TODO: Adjust width as needed */
+  height: 100px; /* TODO: Adjust height as needed */
+  background: transparent; /* TODO: Change to rgba(255, 0, 0, 0.3) for debugging */
+  border: none; /* TODO: Change to 2px solid red for debugging */
+  cursor: pointer;
+  pointer-events: all; /* Enable clicks on the hitbox */
+  border-radius: 4px; /* Optional: rounded corners */
+}
+
+.RayGun-hitbox:hover {
+  background: rgb(255, 0, 0); /* TODO: Customize hover effect */
+  transform: scale(1.05); /* TODO: Customize hover animation */
+  transition: all 0.2s ease;
+}
+
+/* RayGun Video Styles */
+#RayGun-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: 9999;
+  background: black;
+  display: none; /* Hidden by default */
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .RayGun-hitbox {
+    width: 80px; /* TODO: Adjust for mobile */
+    height: 80px; /* TODO: Adjust for mobile */
+  }
+  
+  #RayGun-video {
+    object-fit: contain; /* Better fit for mobile */
+  }
+}

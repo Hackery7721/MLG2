@@ -1,0 +1,25 @@
+/* Game Overlay Styles */
+@import url('./golden-age.css');
+.game-overlay {
+  pointer-events: auto;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.game-hitbox {
+  display: block;
+  border-radius: 8px;
+  box-sizing: border-box;
+  /* Removed transition to eliminate any visual effects */
+}
+
+/* Removed hover scaling effect and glow */
+
+.game-overlay.zoomed {
+  transform: scale(1.2);
+}
+
+/* Optional: Add a subtle glow effect when zoomed */
+.game-overlay.zoomed .game-hitbox {
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.5);
+}

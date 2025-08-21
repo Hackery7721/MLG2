@@ -1,0 +1,27 @@
+* {
+    overscroll-behavior: none; /* Prevents scrollbars during overscroll */
+  }
+  
+  @font-face {
+    font-family: 'Comic Sans';
+    src: url("/MLG/comic-sans-ms/COMIC.TTF");
+  }
+  
+  html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Prevent scrollbars during loading */
+    background: black;
+    font-family: 'Comic Sans MS', 'Comic Sans', 'sans-serif';
+    cursor: crosshair;
+    touch-action: manipulation; /* Disables pinch-to-zoom and other gestures */
+  /*  cursor: url('/MLG/snipercursor.png'), auto; */
+  }
+  
+  /* Canvas Styles */
+  canvas {
+    display: block;
+    position: fixed;
+  }

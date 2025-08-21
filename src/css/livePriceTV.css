@@ -1,0 +1,53 @@
+
+/* General styles for market cap and volume content */
+.marketcap-volume-content {
+    text-align: center;
+    color: white;
+  }
+  
+  .price-content {
+    text-align: center;
+    color: white;
+    transform: rotateY(180deg);
+  }
+  
+  /* Loading text for both TVs */
+  .loading-text {
+    font-size: 9px;
+    color: white;
+    text-align: center;
+    margin: 0;
+  }
+  
+  /* Market Cap text */
+  .marketcap-text {
+    font-size: 9px;
+    color: white;
+    text-align: left;
+    margin: 0;
+  }
+  
+  /* Volume text */
+  .volume-text {
+    font-size: 9px;
+    color: white;
+    text-align: left;
+    margin: 0;
+  }
+  
+  /* Price text */
+  .price-text {
+    font-size: 6px;
+    color: white;
+    text-align: left;
+    margin: 0;
+  }
+  
+  /* Error message text */
+  .error-text {
+    font-size: 6px;
+    color: red;
+    text-align: center;
+    margin: 0;
+  }
+  

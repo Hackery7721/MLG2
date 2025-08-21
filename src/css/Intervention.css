@@ -1,0 +1,27 @@
+/* CSS for Intervention overlay */
+.Intervention-overlay {
+  pointer-events: auto;
+  position: absolute;
+  z-index: 1000;
+}
+
+.Intervention-hitbox {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.Intervention-hitbox:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: scale(1.05);
+}
+
+.Intervention-hitbox:active {
+  transform: scale(0.95);
+}
